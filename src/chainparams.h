@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2016 The Bitcoin Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -28,6 +28,9 @@ typedef std::map<int, uint256> MapCheckpoints;
 
 struct CCheckpointData {
     MapCheckpoints mapCheckpoints;
+    int64_t nTimeLastCheckpoint;
+    int64_t nTransactionsLastCheckpoint;
+    double fTransactionsPerDay;
 };
 
 struct ChainTxData {
@@ -49,6 +52,7 @@ public:
     enum Base58Type {
         PUBKEY_ADDRESS,
         SCRIPT_ADDRESS,
+        SCRIPT_ADDRESS2,
         SECRET_KEY,
         EXT_PUBLIC_KEY,
         EXT_SECRET_KEY,

@@ -1,13 +1,5 @@
 sudo: required
 dist: trusty
-<<<<<<< HEAD
-=======
-
-#workaround for https://github.com/travis-ci/travis-ci/issues/5227
-addons:
-  hostname: litecoin-tester
-
->>>>>>> e39a79b... Litecoin: Use litecoin_scrypt to solve blocks in mininode.py
 os: linux
 language: generic
 cache:

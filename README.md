@@ -16,9 +16,9 @@ Forking
 Follow the guide:
 https://vcoin-project.github.io/cloning-litecoin/
 
-4a. Download and extract the Litecoin source
+4a. ~~Download and extract the Litecoin source~~
 
-4b. Copy and Replace Litecoin
+4b. ~~Copy and Replace Litecoin~~
 ```
 grep -rl 'litecoin-project' ./ | xargs sed -i 's/litecoin-project/btcpunk/g'
 grep -rl 'litecoin' ./ | xargs sed -i 's/litecoin/isicoin/g'
@@ -28,7 +28,7 @@ grep -rl 'lite' ./ | xargs sed -i 's/lite/isi/g'
 grep -rl 'LITE' ./ | xargs sed -i 's/LITE/ISI/g'
 grep -rl 'Lite' ./ | xargs sed -i 's/Lite/Isi/g'
 ```
-4c. Copy and Replace LTC
+4c. ~~Copy and Replace LTC~~
 ```
 grep -rl 'ltc' ./ | xargs sed -i 's/ltc/isi/g'
 grep -rl 'LTC' ./ | xargs sed -i 's/LTC/ISI/g'

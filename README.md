@@ -37,7 +37,18 @@ grep -rl 'Ltc' ./ | xargs sed -i 's/Ltc/Isi/g'
 
 4d. Change rpc and port numbers
 ```
-Litecoin uses port 9333 testnet 19333, rpcport 9332 testnet 19332. We will change them to port 10333 testnet 11333, rpcport 10332 testnet 11332
+Litecoin
+main port 9333 
+testnet 19333
+rpcport 9332
+regtest 19332
+```
+```
+Punkcoin
+main port 10333 
+testnet 11333
+rpcport 10332
+regtest 11332
 ```
 4e. Change starting letter for addresses.
 ```

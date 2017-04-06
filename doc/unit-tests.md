@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the litecoind tests manually, launch `src/test/test_litecoin`.
+To run the punkcoind tests manually, launch `src/test/test_punkcoin`.
 
-To add more litecoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more punkcoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the litecoin-qt tests manually, launch `src/qt/test/test_litecoin-qt`
+To run the punkcoin-qt tests manually, launch `src/qt/test/test_punkcoin-qt`
 
-To add more litecoin-qt tests, add them to the `src/qt/test/` directory and
+To add more punkcoin-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

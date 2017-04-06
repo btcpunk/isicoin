@@ -114,8 +114,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Litecoin</source>
-        <translation>Litecoin</translation>
+        <source>Punkcoin</source>
+        <translation>Punkcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -490,8 +490,8 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Litecoin Core</source>
-        <translation>Craidd Litecoin</translation>
+        <source>Punkcoin Core</source>
+        <translation>Craidd Punkcoin</translation>
     </message>
     <message>
         <source>Information</source>

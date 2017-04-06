@@ -1,12 +1,12 @@
 *.tar.gz
 
 *.exe
-src/litecoin
-src/litecoind
-src/litecoin-cli
-src/litecoin-tx
-src/test/test_litecoin
-src/qt/test/test_litecoin-qt
+src/punkcoin
+src/punkcoind
+src/punkcoin-cli
+src/punkcoin-tx
+src/test/test_punkcoin
+src/qt/test/test_punkcoin-qt
 
 # autoreconf
 Makefile.in
@@ -55,7 +55,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.litecoin
+.punkcoin
 *.a
 *.pb.cc
 *.pb.h
@@ -74,12 +74,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-litecoin-qt
-Litecoin-Qt.app
+punkcoin-qt
+Punkcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-litecoin-qt_test
+punkcoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp

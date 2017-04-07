@@ -83,6 +83,57 @@ src/alert.cpp
 static const char* pszMainKey = "040155710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9";
 static const char* pszTestKey = "04305590343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a";
  ```
+4j. Remove Merkel root and Genesis Block.
+ ``` 
+ ```
+4k. Remove Nonce and testnet genesis.
+ ```
+  ```
+4l. Add Epochtime and Timestamp.
+ ```
+./src/chainparams.cpp:
+const char* pszTimestamp = "In 1932 the editor Mario Nerbini decided to open a new weekly newspaper for kids, containing illustrated tales with Mickey Mouse.";
+...
+genesis = CreateGenesisBlock(1483228800, 1234567890, 0x1e0ffff0, 1, 100 * COIN);
+  ```
+4m. Fixing the checkpoints.
+```
+./src/chainparams.cpp:
+ checkpointData = (CCheckpointData) {
+                boost::assign::map_list_of
+                        (  0, uint256("0x"))
+        };
+  ```
+4n. Change max money supply and coinbase maturity.
+```
+./src/amount.cpp:
+static const CAmount MAX_MONEY = 999000000 * COIN;
+./consensus/consensus.h:
+static const int COINBASE_MATURITY = 10;
+```
+4o. Change block times from 2.5 minutes to 30 seconds.
+```
+./src/chainparams.cpp:
+consensus.nPowTargetSpacing = 1 * 30;
+```
+4p. Change re-targeting from the ridiculous 2.5 days to every 5 minutes.
+```
+./src/chainparams.cpp:
+consensus.nPowTargetTimespan = 10 * 30;
+```
+4q. Add premine and change block rewards.
+```
+./src/chainparams.cpp:
+genesis = CreateGenesisBlock(1483228800, 1234567890, 0x1e0ffff0, 1, 100 * COIN);
+```
+4r. Update Images.
+```
+convert -resize 16 -background transparent -gravity center -crop 16x16+0+0 troll.png -flatten -colors 256 troll.ico
+cp /Downloads/troll.png qt/res/icons/bitcoin.png 
+cp /Downloads/troll.ico qt/res/icons/bitcoin.ico 
+```
+4s. Update Seed node-
+
 
 License
 -------
